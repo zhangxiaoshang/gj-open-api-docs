@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>WS行情 | OpenAPI</title>
+    <meta name="description" content="">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.939f2eac.css" as="style"><link rel="preload" href="/assets/js/app.c4f27978.js" as="script"><link rel="preload" href="/assets/js/6.faee7d72.js" as="script"><link rel="prefetch" href="/assets/js/4.524904bd.js"><link rel="prefetch" href="/assets/js/2.cda51ec0.js"><link rel="prefetch" href="/assets/js/3.93fb9c93.js"><link rel="prefetch" href="/assets/js/5.d202023e.js"><link rel="prefetch" href="/assets/js/7.3b824faf.js"><link rel="prefetch" href="/assets/js/8.19ce5039.js"><link rel="prefetch" href="/assets/js/9.ee2448e3.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.939f2eac.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">OpenAPI</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/docs/" class="nav-link router-link-active">文档</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">选择语言</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/kline-api.html" class="nav-link router-link-exact-active router-link-active">简体中文</a></li><li class="dropdown-item"><!----> <a href="/en/" class="nav-link">English</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/docs/" class="nav-link router-link-active">文档</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">选择语言</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/kline-api.html" class="nav-link router-link-exact-active router-link-active">简体中文</a></li><li class="dropdown-item"><!----> <a href="/en/" class="nav-link">English</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/" class="sidebar-link">首页</a></li><li><a href="/docs/" class="sidebar-link">介绍</a></li><li><a href="/docs/open-api.html" class="sidebar-link">OpenAPI接口文档</a></li><li><a href="/docs/kline-api.html" class="active sidebar-link">WS行情</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/kline-api.html#订阅-k线行情" class="sidebar-link">订阅-K线行情</a></li><li class="sidebar-sub-header"><a href="/docs/kline-api.html#订阅-前24小时行情" class="sidebar-link">订阅-前24小时行情</a></li></ul></li></ul> </div> <div class="page"> <div class="content"><h1 id="ws行情"><a href="#ws行情" aria-hidden="true" class="header-anchor">#</a> WS行情</h1> <h2 id="订阅-k线行情"><a href="#订阅-k线行情" aria-hidden="true" class="header-anchor">#</a> 订阅-K线行情</h2> <p><code>ws://stagingqa.365os.com/kline-api/ws</code></p> <p><strong>请求</strong></p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;event&quot;</span><span class="token operator">:</span><span class="token string">&quot;sub&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;params&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+        <span class="token property">&quot;channel&quot;</span><span class="token operator">:</span><span class="token string">&quot;market_$base$quote_kline_[1min/5min/15min/30min/60min/1day/1week/1mo nth]&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;cb_id&quot;</span><span class="token operator">:</span><span class="token string">&quot;自定义&quot;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><strong>返回订阅状态1次</strong></p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;event_rep&quot;</span><span class="token operator">:</span><span class="token string">&quot;subed&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;channel&quot;</span><span class="token operator">:</span><span class="token string">&quot;market_$base$quote_kline_[1min/5min/15min/30min/60min/1day/1week/1month] &quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;cb_id&quot;</span><span class="token operator">:</span><span class="token string">&quot;原路返回&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;ts&quot;</span><span class="token operator">:</span><span class="token number">1506584998239</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;status&quot;</span><span class="token operator">:</span><span class="token string">&quot;ok&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><strong>持续返回订阅消息</strong></p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;channel&quot;</span><span class="token operator">:</span><span class="token string">&quot;market_$base$quote_kline_[1min/5min/15min/30min/60min/1day/1week/1month]&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;ts&quot;</span><span class="token operator">:</span><span class="token number">1506584998239</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;tick&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+        <span class="token property">&quot;id&quot;</span><span class="token operator">:</span><span class="token number">1506602880</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;amount&quot;</span><span class="token operator">:</span><span class="token number">123.1221</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;vol&quot;</span><span class="token operator">:</span><span class="token number">1212.12211</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;open&quot;</span><span class="token operator">:</span><span class="token number">2233.22</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;close&quot;</span><span class="token operator">:</span><span class="token number">1221.11</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;high&quot;</span><span class="token operator">:</span><span class="token number">22322.22</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;low&quot;</span><span class="token operator">:</span><span class="token number">2321.22</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="订阅-前24小时行情"><a href="#订阅-前24小时行情" aria-hidden="true" class="header-anchor">#</a> 订阅-前24小时行情</h2> <p>未完待续. . .</p></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/docs/open-api.html" class="prev">
+          OpenAPI接口文档
+        </a></span> <!----></p></div> </div> <!----></div></div>
+    <script src="/assets/js/6.faee7d72.js" defer></script><script src="/assets/js/app.c4f27978.js" defer></script>
+  </body>
+</html>
