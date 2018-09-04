@@ -1,11 +1,12 @@
 module.exports = {
+  base: '/open-api-docs/',
   locales: {
     '/': {
-      lang: 'zh_CN',
+      lang: 'zh-CN',
       title: 'OpenAPI'
     },
     '/en/': {
-      lang: 'en_US',
+      lang: 'en-US',
       title: 'OpenAPI'
     }
   },

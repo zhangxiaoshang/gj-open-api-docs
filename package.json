@@ -1,0 +1,11 @@
+{
+  "name": "gj-open-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@192.168.0.115:xiaoshang/open-api-docs.git",
+  "author": "zhangguangshang",
+  "license": "MIT",
+  "scripts": {
+    "docs:build": "vuepress build ."
+  }
+}
