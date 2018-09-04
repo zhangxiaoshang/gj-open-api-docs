@@ -1,5 +1,5 @@
 module.exports = {
-  base: '/open-api-docs/',
+  base: '/gj-open-api-docs/',
   locales: {
     '/': {
       lang: 'zh-CN',
